@@ -1,0 +1,86 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdul Aziz | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#03050d;color:white;line-height:1.7;overflow-x:hidden;position:relative;}
+#bg-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;background:#03050d;}
+section{padding:90px 8%;position:relative;z-index:1;}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:transparent;}
+h1{font-size:clamp(4rem,10vw,8rem);background:linear-gradient(90deg,#00f0ff,#ff007f,#00f0ff);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glowShine 5s linear infinite;filter:drop-shadow(0 0 20px rgba(0,240,255,0.3));}
+@keyframes glowShine{to{background-position:200% center}}
+.subtitle{font-size:1.4rem;color:#cbd5e1;margin-top:10px;letter-spacing:3px;text-transform:uppercase;text-shadow:0 0 10px rgba(255,255,255,0.2);}
+.card{background:rgba(5,10,25,0.6);padding:30px;border-radius:20px;border:1px solid rgba(255,0,127,0.2);margin-top:20px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 40px rgba(0,0,0,0.7);transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);}
+.card:hover{border-color:#00f0ff;box-shadow:0 15px 40px rgba(0,240,255,0.15);transform:translateY(-8px) scale(1.01);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.item{background:rgba(5,10,25,0.6);padding:25px;border-radius:18px;border:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all 0.3s ease;}
+.item:hover{border-color:#ff007f;box-shadow:0 0 25px rgba(255,0,127,0.3);transform:translateY(-5px);}
+a.btn{display:inline-block;margin-top:20px;padding:14px 32px;border-radius:999px;color:white;text-decoration:none;border:1px solid #ff007f;background:rgba(255,0,127,0.05);box-shadow:0 0 15px rgba(255,0,127,0.2);transition:all 0.3s ease;font-weight:bold;letter-spacing:1px;}
+a.btn:hover{background:#ff007f;box-shadow:0 0 30px #ff007f;transform:scale(1.05);color:white;}
+h2{font-size:3rem;text-align:center;margin-bottom:30px;background:linear-gradient(180deg,#fff,#666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:1px;}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<section class="hero">
+<div>
+<h1>Abdul Aziz</h1>
+<div class="subtitle">Student Developer â€¢ Future Software Engineer</div>
+<a class="btn" href="https://github.com/ab11aziz2013-alt" target="_blank">GitHub Profile</a>
+</div>
+</section>
+<section>
+<h2>About Me</h2>
+<div class="card">
+<p>I am Abdul Aziz, a student developer with a strong interest in programming, technology, web development, and software engineering.</p><br>
+<p>My journey into coding started with curiosity and a desire to understand how websites, applications, and digital systems work behind the scenes. I enjoy learning new technologies, solving problems, experimenting with projects, and continuously improving my skills through practical experience.</p><br>
+<p>Currently, I am focused on building a strong foundation in HTML, CSS, JavaScript, Git, and GitHub. Every project I create helps me gain valuable experience and a deeper understanding of software development.</p><br>
+<p>My long-term goal is to become a skilled software engineer, contribute to open-source projects, and build useful products that make a positive impact.</p>
+</div>
+</section>
+<section>
+<h2>Skills</h2>
+<div class="grid">
+<div class="item">HTML</div><div class="item">CSS</div><div class="item">JavaScript</div><div class="item">Git</div><div class="item">GitHub</div><div class="item">Responsive Design</div><div class="item">Problem Solving</div><div class="item">Continuous Learning</div>
+</div>
+</section>
+<section>
+<h2>Projects</h2>
+<div class="grid">
+<div class="item"><b>Portfolio Website</b><br><br>A personal portfolio showcasing skills, learning progress, and future goals.</div>
+<div class="item"><b>Learning Projects</b><br><br>Small projects created while learning programming and web development concepts.</div>
+<div class="item"><b>Future Open Source Contributions</b><br><br>Preparing to contribute to open-source communities and collaborative development.</div>
+</div>
+</section>
+<section>
+<h2>Developer Journey</h2>
+<div class="card">
+2026 â€” Started learning programming and web development.<br><br>Explored HTML, CSS, JavaScript, Git, and GitHub while building personal projects and improving problem-solving skills.<br><br>Continuing to learn modern technologies and software development practices every day.
+</div>
+</section>
+<section>
+<h2>Learning Philosophy</h2>
+<div class="card">
+Technology changes rapidly, and I believe learning should never stop.<br><br>Instead of focusing only on theory, I prefer learning by building, experimenting, making mistakes, and improving through practical experience.<br><br>Every line of code written today becomes a step toward becoming a better developer tomorrow.
+</div>
+</section>
+<section>
+<h2>Future Goals</h2>
+<div class="grid">
+<div class="item">Build Professional Web Applications</div><div class="item">Contribute To Open Source</div><div class="item">Learn Advanced JavaScript</div><div class="item">Become A Software Engineer</div><div class="item">Create Useful Digital Products</div><div class="item">Improve Problem Solving Skills</div>
+</div>
+</section>
+<section>
+<h2>Statistics</h2>
+<div class="grid">
+<div class="item">âˆž Learning Mindset</div><div class="item">100% Curiosity Driven</div><div class="item">24/7 Exploring Technology</div><div class="item">Always Building</div>
+</div>
+</section>
+<script>
+const canvas=document.getElementById('bg-canvas');const ctx=canvas.getContext('2d');let columns;let drops=[];const fontSize=16;const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>[]{}/\\+=*&^%$#@!".split("");const mouse={x:null,y:null,radius:120};window.addEventListener('mousemove',(e)=>{mouse.x=e.x;mouse.y=e.y});window.addEventListener('mouseout',()=>{mouse.x=null;mouse.y=null});function initCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;columns=Math.floor(canvas.width/fontSize);drops=[];for(let x=0;x<columns;x++){drops[x]={y:Math.random()*-100,speed:Math.random()*2+2,color:Math.random()>0.5?'#00f0ff':'#ff007f'}}}initCanvas();window.addEventListener('resize',initCanvas);function drawMatrix(){ctx.fillStyle='rgba(3, 5, 13, 0.15)';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.font=fontSize+'px monospace';for(let i=0;i<drops.length;i++){const text=chars[Math.floor(Math.random()*chars.length)];let currentX=i*fontSize;let currentY=drops[i].y*fontSize;if(mouse.x!==null&&mouse.y!==null){let dx=mouse.x-currentX;let dy=mouse.y-currentY;let distance=Math.sqrt(dx*dx+dy*dy);if(distance<mouse.radius){let angle=Math.atan2(dy,dx);currentX-=Math.cos(angle)*(mouse.radius-distance)*0.5;currentY-=Math.sin(angle)*(mouse.radius-distance)*0.5}}ctx.fillStyle=drops[i].color;ctx.fillText(text,currentX,currentY);if(drops[i].y*fontSize>canvas.height&&Math.random()>0.975){drops[i].y=0;drops[i].speed=Math.random()*2+2}drops[i].y+=drops[i].speed*0.15}}function animate(){drawMatrix();requestAnimationFrame(animate)}animate();
+</script>
+</body>
+</html>
